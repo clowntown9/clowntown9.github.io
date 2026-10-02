@@ -1,0 +1,45 @@
+body {
+    margin: 0px;
+}
+
+#featured {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.featured-item {
+    width: 50vw;
+    height: 100vh;
+    transition: background-color 0.2s;
+}
+
+.featured-item-txt {
+    margin: 10vh 0;
+    color:bisque;
+    text-align: center;
+}
+
+#sanctuary {
+    background-color: blue;
+    text-shadow: 2px 2px 1px red;
+}
+
+#sanctuary:hover {
+    background-color:blueviolet;
+}
+
+#shop {
+    background-color: red;
+    text-shadow: 2px 2px 4px blue;
+}
+
+#shop:hover {
+    background-color:chocolate;
+}
+
+#other-work {
+    border-style: solid none none none;
+    border-width: 10vh;
+    margin-top: 10vh;
+    height: 10vh;
+}
