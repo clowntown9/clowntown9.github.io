@@ -1,5 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bytesized&display=swap');
+
+:root {
+    --news-header-height: 10vh;
+}
+
 body {
     margin: 0px;
+}
+
+#news-header {
+    height: var(--news-header-height);
+    font-size: 0px;
+    font-family: bytesized, sans-serif;
 }
 
 #featured {
@@ -11,30 +23,33 @@ body {
     width: 50vw;
     height: 100vh;
     transition: background-color 0.2s;
+    transition: text-shadow 0.2s;
 }
 
 .featured-item-txt {
     margin: 10vh 0;
     color:bisque;
     text-align: center;
+    font-family: bytesized, sans-serif;
+    font-size: 8vw;
 }
 
 #sanctuary {
-    background-color: blue;
-    text-shadow: 2px 2px 1px red;
+    background-color:darkslategrey;
 }
 
 #sanctuary:hover {
-    background-color:blueviolet;
+    background-color:darkcyan;
+    text-shadow: 2px 2px 5px bisque;
 }
 
 #shop {
-    background-color: red;
-    text-shadow: 2px 2px 4px blue;
+    background-color:firebrick;
 }
 
 #shop:hover {
-    background-color:chocolate;
+    background-color:tomato;
+    text-shadow: 2px 2px 5px bisque;
 }
 
 #other-work {
