@@ -22,20 +22,19 @@ body {
 .featured-item {
     width: 50vw;
     height: 100vh;
-    transition: background-color 0.2s;
-    transition: text-shadow 0.2s;
+    transition: background-color 0.5s, text-shadow 0.5s;
 }
 
 .featured-item-txt {
     margin: 10vh 0;
     color:bisque;
     text-align: center;
-    font-family: bytesized, sans-serif;
+    font-family: sans-serif;
     font-size: 8vw;
 }
 
 #sanctuary {
-    background-color:yellow;
+    background-color:darkslategray;
 }
 
 #sanctuary:hover {
