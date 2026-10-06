@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bytesized&display=swap');
 
 :root {
-    --news-header-height: 10vh;
+    --news-ticker-height: 10vh;
 }
 
 body {
     margin: 0px;
 }
 
-#news-header {
-    height: var(--news-header-height);
-    font-size: 0px;
+#news-ticker {
+    height: var(--news-ticker-height);
+    font-size: 5vw;
+    vertical-align: middle;
     font-family: bytesized, sans-serif;
 }
 
