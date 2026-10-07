@@ -69,6 +69,7 @@ body {
         #111
     );
     background-blend-mode: difference;
+    animation: 
 }
 
 #featured {
@@ -119,6 +120,7 @@ body {
     }
     .featured-item-txt {
         font-size: 11vw;
+        margin: 10vh;
     }
     :root {
         --news-ticker-height: 6vw;
