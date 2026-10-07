@@ -69,7 +69,26 @@ body {
         #111
     );
     background-blend-mode: difference;
-    animation: 
+    animation: bgmove 2s linear infinite;
+}
+
+@keyframes bgmove {
+    from {
+        background:
+        radial-gradient(
+            circle at 30% 30%,
+            #7b4aa8,
+            #111
+        )
+    }
+    to {
+        background:
+        radial-gradient(
+            circle at 50% 50%,
+            #7b4aa8,
+            #111
+        )
+    }
 }
 
 #featured {
