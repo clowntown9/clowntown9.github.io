@@ -4,7 +4,7 @@
 
 :root {
     --news-ticker-height: 5vw;
-    --nav-bar-margin: clamp(100px, 15vw, 250px);
+    --nav-bar-margin: clamp(100px, 20vw, 250px);
     --default-font: Roboto;
 }
 
@@ -28,7 +28,7 @@
     font-size: calc(var(--nav-bar-margin)*0.12)
 }
 
-#nav-bar li {margin-left: 10px;}
+#nav-bar li {margin-top: 2rem;}
 
 #main {
     margin-right: var(--nav-bar-margin);
