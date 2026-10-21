@@ -4,31 +4,14 @@
 
 :root {
     --news-ticker-height: 5vw;
-    --nav-bar-margin: clamp(100px, 20vw, 250px);
     --default-font: Roboto;
+    --main-color: #c880ff
 }
 
 * {
     font-family:'Roboto', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
 }
-
-#nav-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    z-index: 2;
-    right: 0;
-    height: 100vh; width: var(--nav-bar-margin);
-    background-color: black;
-    flex-shrink: 0;
-    color:white;
-    font-family: var(--default-font);
-    font-size: calc(var(--nav-bar-margin)*0.12)
-}
-
-#nav-bar li {margin-top: 2rem;}
 
 #main {
     margin-right: var(--nav-bar-margin);
@@ -37,21 +20,38 @@
     margin: 0px;
 }
 
-#site-intro {display: flex; flex-direction:column;
-    width: 100%; height: 100vh;}
-.title {z-index: 2; font-family: Roboto; color: black; margin-top: auto;}
-.title h1 {font-size: 10vw}
-.title h2 {font-size: 4vw}
+#site-intro {width: 100%; height: 100vh;}
+#title-box {
+    height: 100%;
+    width: 100%;
+    text-align: left;
+}
+#title-box h1{
+    z-index: 2;
+    font-family: Roboto; 
+    color: hsv(278, 80, 50);
+    mix-blend-mode: difference;
+    font-size: 15vw;
+}
+.accent {background-color: #c880ff}
+
+#site-intro .accent {
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 60%;
+    height: 100vh;
+}
 
 .glow {
+    z-index: -1;
     position: absolute;
-    background:radial-gradient(circle, hsla(274, 100%, 81%, 0.5), hsla(48, 54%, 84%, 0));
+    background:radial-gradient(circle, hsla(274, 100%, 81%, 1), hsla(48, 54%, 84%, 0));
     animation: glow-fade 4s ease-in-out forwards 
 }
 
 @keyframes glow-fade{0% {filter: opacity(0%)} 100% {filter: opacity(100%)}}
-
-#site-intro-glow {width: 100%; height:100vh; position: absolute; top: 0; left: 0;}
 
 .news-ticker {
     font-family: 'Courier New', Courier, monospace;
