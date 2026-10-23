@@ -12,3 +12,5 @@ function updateMotd() {
 
 document.addEventListener("DOMContentLoaded", updateMotd);
 motd.addEventListener("click", updateMotd);
+
+const canavs = document.getElementById("canvas");
