@@ -5,6 +5,7 @@
 :root {
     --news-ticker-height: 5vw;
     --default-font: Roboto;
+    --main-color: #c880ff
 }
 
 * {
@@ -32,19 +33,12 @@
     z-index: 2;
     margin-bottom: 3vh;
 }
-#title-box .overline {border-top: black solid 2px; width: 1rem;}
-#title-box h1 {font-size: 2rem}
+.overline {border-top: black solid 2px; width: 20%; margin: 0.5vh 0 1vh 0;}
+#title-box h1 {font-size: 3rem}
 #title-box h2 {font-size: 1rem}
-#motd {transition: color 0.2s ease, text-shadow 0.2s ease; font-size: 2rem;}
-#motd:hover {color:gray; text-shadow: lightgray 3px 2px;}
-
-.glow {
-    position: absolute;
-    background: radial-gradient(circle, hsla(274, 100%, 81%, 0), hsla(48, 54%, 84%, 0));
-    animation: glow-fade 4s ease-in-out forwards 
-}
-
-@keyframes scroll {from {transform: translateX(0%);} to {transform: translateX(-50%);}}
+#motd {transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2 ease; font-size: 2rem;}
+#motd {width: fit-content}
+#motd p:hover {color:rgb(160, 160, 160); text-shadow: white 3px 2px; transform: rotate3d(1, 2, 1, 2deg);}
 
 #bg {
     height: 100vh;
