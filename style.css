@@ -11,6 +11,8 @@
 * {
     font-family:'Roboto', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 #main {
@@ -36,8 +38,7 @@
 .overline {border-top: black solid 2px; width: 20%; margin: 0.5vh 0 1vh 0;}
 #title-box h1 {font-size: 3rem}
 #title-box h2 {font-size: 1rem}
-#motd {transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2 ease; font-size: 2rem;}
-#motd {width: fit-content}
+#motd {transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease; font-size: 2rem; width: fit-content;}
 #motd p:hover {color:rgb(160, 160, 160); text-shadow: white 3px 2px; transform: rotate3d(1, 2, 1, 2deg);}
 
 #bg {
