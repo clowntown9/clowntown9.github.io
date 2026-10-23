@@ -35,11 +35,22 @@
     z-index: 2;
     margin-bottom: 3vh;
 }
-.overline {border-top: black solid 2px; width: 20%; margin: 0.5vh 0 1vh 0;}
-#title-box h1 {font-size: 3rem}
-#title-box h2 {font-size: 1rem}
-#motd {transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease; font-size: 2rem; width: fit-content;}
-#motd p:hover {color:rgb(160, 160, 160); text-shadow: white 3px 2px; transform: rotate3d(1, 2, 1, 2deg);}
+.overline {border-top: black solid 0.5vh; width: 20%; margin: 0.5vh 0 3vh 0;}
+#title-box h1 {font-size: 6vw}
+#title-box h2 {font-size: 1.25vw}
+#motd {transition: color 0.2s ease, text-shadow 0.2s ease, transform 1s ease;
+    font-size: clamp(0.5rem, 0.75rem, 1rem); width: fit-content;
+    max-width: 20vw; max-height: 10vh;
+    cursor: grab;
+}
+#motd p:hover {color:rgb(160, 160, 160); text-shadow: white 3px 2px; transform: rotate3d(1, 2, 1, 4deg);}
+
+#scroll-down {
+    font-size: clamp(1vw, 1vw, 3vw);
+    position: absolute;
+    bottom: 0;
+    margin: 
+}
 
 #bg {
     height: 100vh;

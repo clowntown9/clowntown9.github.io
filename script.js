@@ -1,8 +1,8 @@
 motd = document.getElementById("motd").firstElementChild;
 motdArray = [
-    "Good work",
-    "Good job",
-    "It worked!"
+    "Welcome",
+    "Take a seat",
+    "Don't look too excited"
 ]
 
 function updateMotd() {
