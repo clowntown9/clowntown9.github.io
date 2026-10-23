@@ -4,7 +4,6 @@
 
 :root {
     --news-ticker-height: 5vw;
-    --nav-bar-margin: clamp(100px, 15vw, 250px);
     --default-font: Roboto;
 }
 
@@ -13,23 +12,6 @@
     margin: 0;
 }
 
-#nav-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    z-index: 2;
-    right: 0;
-    height: 100vh; width: var(--nav-bar-margin);
-    background-color: black;
-    flex-shrink: 0;
-    color:white;
-    font-family: var(--default-font);
-    font-size: calc(var(--nav-bar-margin)*0.12)
-}
-
-#nav-bar li {margin-left: 10px;}
-
 #main {
     margin-right: var(--nav-bar-margin);
     display: flex;
@@ -37,15 +19,23 @@
     margin: 0px;
 }
 
-#site-intro {display: flex; flex-direction:column;
-    width: 100%; height: 100vh;}
-.title {z-index: 2; font-family: Roboto; color: black; margin-top: auto;}
+#site-intro {
+    display: flex; flex-direction:column;
+    width: 100%; height: 100vh;
+    background-color: green;
+    /*background: linear-gradient(var(--gradient-angle), rgba(0, 0, 255, 1), rgba(128, 0, 128, 1));*/
+    mix-blend-mode: difference;
+}
+
+.title {z-index: 2; font-family: Roboto; color: black; margin-top: auto;
+    transform: skewX(var(--angleX)) skewY(var(--angleY));
+}
 .title h1 {font-size: 10vw}
 .title h2 {font-size: 4vw}
 
 .glow {
     position: absolute;
-    background:radial-gradient(circle, hsla(274, 100%, 81%, 0.5), hsla(48, 54%, 84%, 0));
+    background: radial-gradient(circle, hsla(274, 100%, 81%, 0), hsla(48, 54%, 84%, 0));
     animation: glow-fade 4s ease-in-out forwards 
 }
 
