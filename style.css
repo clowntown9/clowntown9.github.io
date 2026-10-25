@@ -7,13 +7,16 @@
     --default-font: Roboto;
     --main-color: #9370DB;
     --secondary-color: #B8DB70;
+    --neutral-color: #ffe6cc;
 }
+body {scroll-behavior: smooth;}
 
 * {
     font-family:'Roboto', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
     user-select: none;
     -webkit-user-select: none;
+    scroll-behavior: smooth;
 }
 
 #main {
@@ -24,72 +27,99 @@
 }
 
 b {font-weight: 900;}
-ul {padding: 0;}
-a {text-decoration: none;}
+ul {padding: 0; list-style: none;}
+menu {padding: 0; list-style: none;}
+a {text-decoration: none; color: var(--main-color)}
+em {color: var(--main-color)}
+button {border: none; background: transparent; padding: 0; margin: 0; font: inherit; outline: none; color: inherit}
 
 @media only screen and (min-width: 600px) {
     #title-box h1 {font-size: 5rem;}
 }
 
-#site-intro {
+#site-intro > div {
+    display: flex;
     width: 100%; height: 100vh;
     font-family: Roboto; color: black;
+    display: flex; flex-direction: column; 
+    justify-content: center;
+    align-items: center;
 }
-#site-intro > div {padding: 3vh 0 0 2vw; display: flex; flex-direction: row;}
-#title-box {
-    display: flex; flex-direction: column;
-    justify-self: left; align-items: right;
-    z-index: 2;
-    margin-bottom: 3vh;
+
+#clown {
+    --clownx: 0;
+    --clowny: 0;
+    left: var(--clownx, 0px);
+    top: var(--clowny, 0px);
+    position: relative;
+    color: var(--main-color);
+    transition: color 1s ease;
 }
+#clown:hover {
+    color: oklch(from var(--main-color) 0.8 c h);
+}
+
 .overline {border-top: black solid 0.5vh; width: 10%; margin: 0.5vh 0 3vh 0;}
-#title-box h1 {font-size: clamp(2rem, 6vw, 6vw);}
-#title-box h2 {font-size: 1.25vw}
-#title-box span {color: var(--main-color)}
+#site-intro .title-box h1 {font-size: clamp(2rem, 15vw, 15vw);}
+#site-intro .title-box h2 {font-size: 1.25vw}
 #motd {transition: color 0.2s ease, text-shadow 0.2s ease, transform 1s ease;
-    font-size: clamp(0.5rem, 0.75rem, 1rem); width: fit-content;
+    font-size: clamp(2vw, 2vw, 5vw); width: fit-content;
     max-width: 20vw; max-height: 10vh;
     cursor: grab;
 }
 #motd p:hover {color:rgb(160, 160, 160); text-shadow: white 3px 2px; transform: rotate3d(1, 2, 1, 4deg);}
-
-#links {width: 20vw;}
-#links ul {width: 4vw; margin: 2vh 0; transition: transform 0.5s ease, width 0.5s ease-out; overflow: clip;}
-#links a {color: var(--main-color); display: flex; flex-direction: row; align-items: center;}
-#links img {border-radius: 50%; width: clamp(10px, 3vw, 10vw); height:fit-content; margin-right: 1vw;}
-#links ul:hover {transform: scale(0.98); width: 100%;}
-
 #canvas {width: 100%; height: 100%; position:absolute}
 
-#scroll-down {
-    font-size: clamp(1vw, 1vw, 3vw);
-    position: absolute;
-    bottom: 2vh;
-}
-
-#bg {
-    height: 100vh;
+#nav {
+    display: flex;
+    z-index: 5;
+    position: fixed;
     width: 100%;
-
-        background: 
-    radial-gradient(
-        circle at 30% 30%,
-        #7b4aa8,
-        #111
-    ),
-    radial-gradient(
-        circle at 50% 50%,
-        red,
-        #111
-    );
-    background-blend-mode: difference;
-    animation: bgmove 2s linear infinite;
+    background-color: rgb(from var(--main-color) r g b / 50%);
+    top: 0;
+    height:8vh;
 }
 
-.audio-container {margin-bottom: 0;}
-
-#bio {
-    margin-top: 10vh;
-    height: 100vh;
-    width: 100%;
+#nav menu {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 4vw;
+    align-self: center;
+    padding: 0 10vw;
 }
+
+.main-section {
+    width:100%; height: 100vh;
+    border-top: 0.5vh #00000015 solid;
+    box-sizing: border-box;
+}
+.main-section .container {margin: 0 15vw; padding: 10vh 0 8vh; box-sizing: border-box;}
+
+#music {height: 50vh;}
+#music .container {
+    height: 100%;
+    display:flex; flex-direction: column; 
+    justify-content: space-between; flex-wrap: nowrap;}
+#music .container > :first-child {
+    display: flex; flex-direction: row;
+    justify-content: space-between;
+}
+#music h1 {font-size: clamp(2vw, 4vw, 5vw)}
+#music h2 {font-size: clamp(1vw, 2vw, 2.5vw)}
+#music .title-box {margin-bottom: 5vh;}
+#music ul {align-content: space-between; list-style:decimal-leading-zero;}
+#music li {font-size: 2vw; padding-bottom: 5vh; color: darkgray}
+#music li:hover {color:black}
+#music .contact {margin-top: auto;}
+#music #pause-all {list-style: none; font-size: 1vw;}
+
+#bottom {height:40vh; background-color: var(--main-color); font-size: 1.5vw;}
+#bottom .container {padding-top: 5vh}
+#bottom .container > div {width:100%; text-align: center; padding-bottom: 3vh;}
+#bottom .links {display: flex; flex-direction: row; justify-content: left;}
+#bottom .links > li {padding-right: 10vw;}
+#bottom a {color: black}
+#bottom menu li li {padding-bottom: 1vh;}
+#bottom h1 {padding:0; font-size:4vw}

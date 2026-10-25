@@ -5,79 +5,66 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio</title>
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="css/ost.css">
 </head>
 <body>
 <div id="main">
+<canvas id="canvas" height="calc(100% - 3vh)" width="calc(100%-2vw)">there's supposed to be a cool graphic here, but your browser isn't playing nice</canvas>
+<div id="nav">
+    <menu>
+        <li><a href="#links">links</a></li>
+        <li><a href="#music">music</a></li>
+    </menu>
+</div>
 <section id="site-intro">
     <div>
-        <div>
-            <div id="motd">
-                <p></p>
-            </div>
-            <div id="title-box">
-                <h1><span>Clown</span>town</h1>
-                <div class="overline"></div>
-            </div>
-            <div id="links">
-                <h2>links:</h2>
-                <ul><a href="https://noanimaltesting.org"><img src="/linkimgs/noanimaltesting.png">noanimaltesting.org</a></ul>
-                <ul><a href="https://noanimaltesting.org/rootwork/"><img src="/linkimgs/rootwork.svg">rootwork</a></ul>
-            </div>
+        <div class="title-box">
+            <h1><span id="clown">Clown</span>town</h1>
+            <div class="overline"></div>
+            <div id="motd"><p></p></div>
         </div>
-        <div id="scroll-down"><span>there's more down here. <b>⬇</b></span>
     </div>
-    <canvas id="canvas" height="calc(100% - 3vh)" width="calc(100%-2vw)">there's supposed to be a cool graphic here, but your browser isn't playing nice</canvas>
+</section>
+<section class="main-section" id="music">
+    <div class="container">
+        <div>
+            <div>
+                <div class="title-box">
+                    <h1>Music</h1>
+                    <h2>for <em>your</em> enjoyment</h2>
+                </div>
+                <p>click any item to hear a sample</p>
+                <p>click again to pause</p>
+            </div>
+            <ul>
+                <li><button id="funky">funky boss battle</button></li>
+                <li><button id="underground">underground</button></li>
+                <li><button id="circus">marginally evil circus</button></li>
+                <li id="pause-all"><button id="pause-all-button">click me to pause</button></li>
+            </ul>
+        </div>
+        <div class="contact"><a href="https://noanimaltesting.org/#contact" target="_blank">Contact</a> if you want to use music in a project.</div>
+    </div>
+</section>
+<section class="main-section" id="sanctuary">
+
+</section>
+
+<section class="main-section" id="noanimaltesting">
+
+</section>
+<section class="main-section" id="bottom">
+    <div class="container">
+        <div><a href="#site-intro">back to top</a></div>
+        <menu class="links">
+            <li><ul>
+                <li><h1><a href="#site-intro">clowntown</a></h1></li>
+                <li><a href="https://noanimaltesting.org" target="_blank">noanimaltesting</a></li>
+                <li><a href="https://noanimaltesting.org/#contact" target="_blank">contact</a></li>
+            </ul></li>
+        </menu>
+    </div>
 </section>
 </div>
-<section class="band ost" id="soundtrack">
-    <canvas class="ost-flies" aria-hidden="true"></canvas>
-    <div class="sheet">
-        <span class="band-no"><b>Rootwork</b></span>
-        <div>
-        <h2 class="up">Music for the nerves.</h2>
-        <p class="lede intro up" style="max-width:48ch">
-            Music curated to accompany cozy farming and working through pain. Four songs to help you through whatever you're dealing with.
-        </p>
-
-        <div class="ost-stage">
-            <div class="ost-deck" id="ostDeck">
-            <div class="ost-glow"></div>
-            <div class="ost-tilt">
-                <div class="ost-record" aria-hidden="true"><div class="ost-spin"><i></i></div></div>
-                <button class="ost-cover" type="button" aria-pressed="false" aria-label="Play a preview of the Sanctuary soundtrack">
-                <img src="./assets/cover-1400.webp" srcset="./assets/cover-700.webp 700w, ./assets/cover-1400.webp 1400w"
-                    sizes="(max-width:860px) 90vw, 30rem" width="1400" height="1400" loading="lazy" decoding="async"
-                    alt="The cover: a glowing seedling drawn in light, rising over hills at dawn.">
-                <span class="ost-sheen"></span>
-                </button>
-            </div>
-            </div>
-
-            <div class="ost-meta">
-            <p class="ost-k">Rootwork · Original Soundtrack</p>
-            <h3>Sanctuary</h3>
-            <p class="ost-by">Clowntown<span class="ost-eq" aria-hidden="true"><b></b><b></b><b></b></span></p>
-            <div class="ost-bar"><i></i><input type="range" min="0" max="1000" value="0" step="1" aria-label="Position in the preview"></div>
-            <p class="ost-time"><span class="ost-now">0:00</span><span class="ost-len">1:32</span></p>
-            <ol class="ost-tracks">
-                <li>Main Theme <em>Clowntown</em></li>
-                <li>Shop Theme <em>Clowntown</em></li>
-                <li>Rain Theme <em>Clowntown</em></li>
-                <li>Menu Theme <em>Clowntown</em></li>
-            </ol>
-            <p class="ost-note">Plus, featuring two more songs from Rootwork's creator, Casp</p>
-            </div>
-        </div>
-        <audio class="ost-audio" preload="none" data-length="91.9">
-            <source src="./assets/sanctuary-ost.opus" type="audio/ogg; codecs=opus">
-            <source src="./assets/sanctuary-ost.mp3" type="audio/mpeg">
-        </audio>
-        </div>
-    </div>
-</section>
-</section>
 <script src="/script.js"></script>
-<script src="js/ost.js" defer></script>
 </body>
 </html>
