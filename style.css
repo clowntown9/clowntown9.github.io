@@ -32,6 +32,7 @@ menu {padding: 0; list-style: none;}
 a {text-decoration: none; color: var(--main-color)}
 em {color: var(--main-color)}
 button {border: none; background: transparent; padding: 0; margin: 0; font: inherit; outline: none; color: inherit}
+p {font-weight: 300}
 
 @media only screen and (min-width: 600px) {
     #title-box h1 {font-size: 5rem;}
@@ -97,7 +98,7 @@ button {border: none; background: transparent; padding: 0; margin: 0; font: inhe
 }
 .main-section .container {margin: 0 15vw; padding: 10vh 0 8vh; box-sizing: border-box;}
 
-#music {height: 50vh;}
+#music {height: 75vh;}
 #music .container {
     height: 100%;
     display:flex; flex-direction: column; 
@@ -106,17 +107,25 @@ button {border: none; background: transparent; padding: 0; margin: 0; font: inhe
     display: flex; flex-direction: row;
     justify-content: space-between;
 }
+#music .container div :first-child {max-width: 30vw}
 #music h1 {font-size: clamp(2vw, 4vw, 5vw)}
 #music h2 {font-size: clamp(1vw, 2vw, 2.5vw)}
+#music p {font-size: clamp(1vw, 2vw, 2.5vw); margin-bottom: 2vhl}
 #music .title-box {margin-bottom: 5vh;}
 #music ul {align-content: space-between; list-style:decimal-leading-zero;}
 #music li {font-size: 2vw; padding-bottom: 5vh; color: darkgray}
 #music li:hover {color:black}
-#music .contact {margin-top: auto;}
+#music .contact {font-size: clamp(1vw, 2vw, 2.5vw); margin-top: auto; padding-bottom: 5vh;}
 #music #pause-all {list-style: none; font-size: 1vw;}
 
+#noanimaltesting {height: 75vh}
+#noanimaltesting .title-box {display: flex; flex-direction: column;}
+#noanimaltesting .title-box > * {padding-bottom: 4vh}
+#noanimaltesting .title-box > div {display: flex; flex-direction: row; justify-content: space-between;}
+#noanimaltesting .container div div * {padding-bottom: 4vh}
+
 #bottom {height:40vh; background-color: var(--main-color); font-size: 1.5vw;}
-#bottom .container {padding-top: 5vh}
+#bottom .container {padding-bottom: 5vh}
 #bottom .container > div {width:100%; text-align: center; padding-bottom: 3vh;}
 #bottom .links {display: flex; flex-direction: row; justify-content: left;}
 #bottom .links > li {padding-right: 10vw;}
