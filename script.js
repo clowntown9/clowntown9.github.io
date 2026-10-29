@@ -3,8 +3,7 @@
 const motd = document.getElementById("motd").firstElementChild;
 const motdArray = [
     "Welcome",
-    "Take a seat",
-    "Don't look too excited"
+    "Take a seat"
 ]
 
 function updateMotd() {
