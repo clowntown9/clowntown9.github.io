@@ -73,7 +73,7 @@ p {font-weight: 300}
 #motd p:hover {color:rgb(160, 160, 160); text-shadow: white 3px 2px; transform: rotate3d(1, 2, 1, 4deg);}
 #site-intro .arrow {justify-self: end; height: fit-content; position: absolute; bottom: 0; padding-bottom: 5vh}
 
-#canvas {position:absolute}
+#canvas {position:absolute; image-rendering: pixelated;}
 
 #nav {
     display: flex;
